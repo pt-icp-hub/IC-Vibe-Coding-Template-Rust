@@ -22,7 +22,7 @@ export const WASM_PATH = resolve(
 );
 
 // The `describe` function is used to group tests together
-describe("Vibe Coding Template Backend", () => {
+describe("SatoshiPool Backend", () => {
   // Define variables to hold our PocketIC instance, canister ID,
   // and an actor to interact with our canister.
   let pic: PocketIc;

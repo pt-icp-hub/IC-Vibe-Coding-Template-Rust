@@ -1,11 +1,23 @@
 {
   "canisters": {
-    "llm": {
-      "type": "pull",
-      "id": "w36hm-eqaaa-aaaal-qr76a-cai"
+    "internet_identity": {
+      "type": "custom",
+      "candid": "https://github.com/dfinity/internet-identity/releases/download/release-2025-04-04-v3/internet_identity.did",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/download/release-2025-04-04-v3/internet_identity_dev.wasm.gz",
+      "init_arg": "(opt record { captcha_config = opt record { max_unsolved_captchas= 50:nat64; captcha_trigger = variant {Static = variant {CaptchaDisabled}}}})",
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "frontend": {}
+    },
+    "faucet_backend": {
+      "candid": "src/faucet_backend/faucet_backend.did",
+      "package": "faucet_backend",
+      "type": "rust"
     },
     "backend": {
-      "dependencies": ["llm"],
       "candid": "src/backend/backend.did",
       "package": "backend",
       "type": "custom",
@@ -27,5 +39,13 @@
   },
   "output_env_file": ".env",
   "version": 1,
-  "dfx": "0.25.0"
+  "dfx": "0.28.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943"
+    },
+    "ic": {
+      "providers": ["https://ic0.app"]
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "vibe-icp",
+  "name": "satoshipool",
   "version": "1.0.0",
-  "description": "Internet Computer Protocol (ICP) project using Rust and Typescript for canister development, with Vibe Coding workflows",
+  "description": "SatoshiPool - A decentralized lending protocol built on the Internet Computer (ICP) platform",
   "main": "index.js",
   "type": "module",
   "workspaces": [

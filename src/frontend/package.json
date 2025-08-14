@@ -6,10 +6,21 @@
   "description": "Frontend for IC Vibe application",
   "scripts": {
     "start": "vite",
-    "build": "dfx generate && tsc && vite build",
+    "build": "tsc && vite build",
     "test": "vitest run"
   },
   "dependencies": {
+    "@dfinity/agent": "^2.4.1",
+    "@dfinity/auth-client": "^2.4.1",
+    "@dfinity/candid": "^2.4.1",
+    "@dfinity/identity": "^2.4.1",
+    "@dfinity/ledger-icp": "^4.0.0",
+    "@dfinity/ledger-icrc": "^2.9.1",
+    "@dfinity/principal": "^2.4.1",
+    "@dfinity/utils": "^2.13.2",
+    "buffer": "^6.0.3",
+    "cbor": "^10.0.9",
+    "js-sha256": "^0.11.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -17,12 +28,16 @@
     "@tailwindcss/vite": "^4.1.7",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
-    "@types/react": "^19.1.4",
-    "@types/react-dom": "^19.1.5",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/testing-library__user-event": "^4.1.1",
     "@vitejs/plugin-react": "^4.0.1",
     "dotenv": "^16.3.1",
     "jsdom": "^26.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.1.7"
+    "tailwindcss": "^4.1.7",
+    "vite-plugin-environment": "^1.1.3",
+    "vitest": "^3.2.4"
   }
 }

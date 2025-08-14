@@ -1,0 +1,17 @@
+[package]
+name = "faucet_backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+serde = "1.0.217"
+candid = "0.10"
+ic-cdk = "0.18.5"
+ic-stable-structures = "0.6.7"
+icrc-ledger-types = "0.1.10"
+ic-cdk-timers = "0.11" # Feel free to remove this dependency if you don't need timers
